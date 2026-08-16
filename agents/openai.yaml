@@ -1,0 +1,6 @@
+interface:
+  display_name: "奇葩谈判模拟器"
+  short_description: "模拟真实谈判对手，并在结束后提供证据化复盘"
+  default_prompt: "开始一场盲盒谈判模拟；先收集必要设定，不要提前透露对手底牌。"
+policy:
+  allow_implicit_invocation: true
