@@ -148,4 +148,4 @@ simulating-quirky-negotiations/
 - [完整技能规则](./SKILL.md)
 - [Codex 调用配置](./agents/openai.yaml)
 
-当前仓库未提供 `LICENSE` 文件。
+本项目采用 [MIT License](LICENSE)。
