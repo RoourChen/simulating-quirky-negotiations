@@ -125,13 +125,26 @@ flowchart TD
 simulating-quirky-negotiations/
 ├── README.md          # 项目介绍与使用指南
 ├── SKILL.md           # 触发条件、谈判流程与复盘规则
+├── LICENSE            # MIT 许可证
+├── .github/workflows/check.yml # GitHub 自动检查
+├── scripts/check_skill.py      # 文件与配置校验器
+├── requirements-check.txt      # 仅供维护检查使用
 └── agents/
     └── openai.yaml    # 显示名称、默认提示词与调用配置
 ```
 
 ## 🧪 使用检查
 
-仓库当前没有自动化测试脚本。安装后，可以用同一场虚构谈判检查以下行为。
+每次推送或提交 Pull Request，GitHub 都会自动检查 README、许可证、Skill 元信息和调用配置。如果配置了图标，也会检查图标文件。检查记录见 [Skill integrity](https://github.com/RoourChen/simulating-quirky-negotiations/actions/workflows/check.yml)，绿色表示通过，红色表示发现问题；也支持在 Actions 页面手动运行。
+
+维护者可以用 Python 3.11 在本地执行相同检查（普通使用者安装 Skill 时无需执行）：
+
+```bash
+python3 -m pip install -r requirements-check.txt
+python3 scripts/check_skill.py
+```
+
+自动检查不评判模型回答质量。安装后，仍可用同一场虚构谈判检查以下行为。
 
 - 开始后 AI 是否保持对手身份，没有代写你的回答。
 - 暂停时是否提供策略建议，继续后是否保留已谈条件。
